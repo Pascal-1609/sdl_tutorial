@@ -60,7 +60,7 @@ jobs:
         run: |
           export CC=${{matrix.config.cc}}
           export CXX=${{matrix.config.cxx}}
-          cmake -b ${{github.workspace}}/build -dcmake_build_type=${{matrix.config.build_type}}
+          cmake -b ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{matrix.config.build_type}}
 
       - name: build
         run: cmake --build ${{github.workspace}}/build --config ${{matrix.config.build_type}} -j2
