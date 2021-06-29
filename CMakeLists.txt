@@ -6,12 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # add freetype
-find_package(Freetype REQUIRED)
-target_link_libraries(${FREETYPE_LIBARIES})
-target_include_directories(PRIVATE ${FREETYPE_INCLUDE_DIRS})
+# find_package(Freetype REQUIRED)
+# target_link_libraries(${FREETYPE_LIBARIES})
+# target_include_directories(PRIVATE ${FREETYPE_INCLUDE_DIRS})
 # add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vendor/freetype")
-# set(FREETYPE_LIBRARY "${CMAKE_CURRENT_BINARY_DIR}/vendor/freetype/libfreetype.so")
-# set(FREETYPE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/vendor/freetype/include")
+#set(FREETYPE_LIBRARY "${CMAKE_CURRENT_BINARY_DIR}/vendor/freetype/libfreetype.so")
+#set(FREETYPE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/vendor/freetype/include")
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vendor/sdl")
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vendor/sdl_mixer")
