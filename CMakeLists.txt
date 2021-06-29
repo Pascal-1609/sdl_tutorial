@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # add freetype
 find_package(Freetype REQUIRED)
-target_link_libraries(demo ${FREETYPE_LIBARIES})
-target_include_directories(demo PRIVATE ${FREETYPE_INCLUDE_DIRS})
+target_link_libraries(${FREETYPE_LIBARIES})
+target_include_directories(PRIVATE ${FREETYPE_INCLUDE_DIRS})
 # add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/vendor/freetype")
 # set(FREETYPE_LIBRARY "${CMAKE_CURRENT_BINARY_DIR}/vendor/freetype/libfreetype.so")
 # set(FREETYPE_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/vendor/freetype/include")
