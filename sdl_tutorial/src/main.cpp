@@ -103,6 +103,26 @@ int main(int argc, char* args[])
         }
     }
 
+    bool quit = false;
+
+    // Event handler
+    SDL_Event e;
+
+    while(!quit) {
+        // Handle events on queue
+        while(SDL_PollEvent(&e) != 0) {
+            // User requests quit
+            if(e.type == SDL_QUIT) {
+                quit = true;
+            }
+        }
+        // Apply the image
+        SDL_BlitSurface(g_hello_world, nullptr, g_screen_surface, nullptr);
+
+        // Update the surface
+        SDL_UpdateWindowSurface(g_window);
+    }
+
     // Free resources and close SDL
     close();
     return 0;
